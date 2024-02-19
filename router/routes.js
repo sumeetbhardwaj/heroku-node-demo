@@ -2,13 +2,11 @@ const express = require("express");
 const { addUser, login, logout } = require("../controller/userController");
 const { createProduct, gatAllProducts } = require("../controller/projectsController");
 const { isAuth } = require("../meddleware/authMeddleware");
-const swaggerUi = require('swagger-ui-express');
-const swaggerSpec = require('../swagger');
-
 const Router = express.Router();
 
-// Use Swagger UI Express for API documentation
-Router.route('/swagger').get(swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+Router.route("/").get((req, res)=>{
+    res.send("Hi This is node js demo API's project ")
+})
 /**
  * @swagger
  * /add_user:
