@@ -5,7 +5,7 @@ const { isAuth } = require("../meddleware/authMeddleware");
 const Router = express.Router();
 
 Router.route("/").get((req, res)=>{
-    res.send("Hi This is node js demo API's project ")
+    res.send("Hi This is node js API's use only for demo project's")
 })
 /**
  * @swagger
